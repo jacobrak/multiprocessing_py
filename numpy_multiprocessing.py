@@ -14,5 +14,6 @@ if __name__ == '__main__':
 
     with Pool(4) as pool:
         results = pool.map(matrix_mult, [(a, b), (a, c), (a, d), (b, c), (b, d), (c, d)])
-
-    print(results)
+    
+    flat = np.concatenate(results).flatten()
+    print(flat) 
