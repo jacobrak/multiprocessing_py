@@ -39,7 +39,7 @@ if __name__ == '__main__':
     p4.start()
     p5.start()
     p6.start()
-    p7.stat()
+    p7.start()
     # Wait 
     p1.join()
     p2.join()
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     p5.join()
     p6.join()
     p7.join()
-    
+
     end = time.time()
     print(f"Took me in parallel: {end - start:.2f} seconds")
 
