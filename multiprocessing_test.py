@@ -27,13 +27,28 @@ if __name__ == '__main__':
     # Start both processes
     p1 = Process(0)
     p2 = Process(1)
+    p3 = Process(2)
+    p4 = Process(3)
+    p5 = Process(4)
+    p6 = Process(5)
+    p7 = Process(6) # I only have 6 cores should slow down
+
     p1.start()
     p2.start()
-
-    # Wait for both to finish
+    p3.start()
+    p4.start()
+    p5.start()
+    p6.start()
+    p7.stat()
+    # Wait 
     p1.join()
     p2.join()
-
+    p3.join()
+    p4.join()
+    p5.join()
+    p6.join()
+    p7.join()
+    
     end = time.time()
     print(f"Took me in parallel: {end - start:.2f} seconds")
 
