@@ -6,7 +6,6 @@ def time_test():
     time.sleep(5)
     print("Wow 5 seconds!")
 
-
 def random_calculation(num):
     result = 50000**random.randint(9**2,9**3)*num
     time.sleep(1)
@@ -29,9 +28,9 @@ if __name__ == "__main__":
     t1.join()
     t2.join()
     end = time.time()
-    print(f"Done time: {end -start}")
+    print(f"Threading time: {end -start}")
 
     start = time.time()
     single()
     end = time.time()
-    print(f"Done time: {end -start}")
+    print(f"None-threading time: {end -start}")
